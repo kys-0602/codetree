@@ -9,11 +9,12 @@ int main() {
     for (int i = 0; i < 3; ++i) {
         char sym; int temp; std::cin >> sym >> temp;
 
-        if (sym == 'Y') {
-            if (temp >= 37) {
-                e += 1;
-            }
-        }
+        if (sym == 'Y' && temp >= 37) e += 1;
+        // if (sym == 'Y') {
+        //     if (temp >= 37) {
+        //         e += 1;
+        //     }
+        // }
     }
 
     std::cout << (e >= 2 ? "E" : "N");
