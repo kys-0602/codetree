@@ -7,12 +7,10 @@ int main() {
 
     int N; std::cin >> N;
 
-    int start = 1;
+    int start = 3;
     while (start <= N) {
-        if (start % 3 == 0) {
-            std::cout << start << ' ';
-        }
-        start += 1;
+        std::cout << start << ' ';
+        start += 3;
     }
 
     return 0;
