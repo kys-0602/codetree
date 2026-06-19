@@ -1,0 +1,15 @@
+#include <iostream>
+
+int main() {
+    std::ios_base::sync_with_stdio(false);
+    std::cin.tie(nullptr);
+    std::cout.tie(nullptr);
+
+    int A, B; std::cin >> A >> B;
+
+    for (; A <= B; ++A) {
+        if (A & 1) std::cout << A << ' ';
+    }
+
+    return 0;
+}
