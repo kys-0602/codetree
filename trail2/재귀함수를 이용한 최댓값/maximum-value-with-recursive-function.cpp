@@ -1,14 +1,12 @@
 #include <iostream>
 #include <vector>
 
-int maxx(const std::vector<int>& vec, int idx, int max) {
-    if (idx == vec.size() - 1) return max;
+int maxx(const std::vector<int>& vec, int idx) {
+    if (idx == vec.size() - 1) return vec[idx];
 
-    if (vec[idx] > max) {
-        max = vec[idx];
-    }
-
-    return maxx(vec, idx + 1, max);
+    int max = maxx(vec, idx + 1);
+    if (vec[idx] > max) return vec[idx];
+    else return max;
 }
 
 int main() {
@@ -18,7 +16,7 @@ int main() {
     int n; std::cin >> n;
     std::vector<int> vec(n, 0);
     for (int i = 0; i < n; ++i) std::cin >> vec[i];
-    std::cout << maxx(vec, 0, vec[0]);
+    std::cout << maxx(vec, 0);
 
     return 0;
 }
